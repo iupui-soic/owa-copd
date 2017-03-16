@@ -1,0 +1,19 @@
+{
+  "version": "0.1.0",
+  "name": "cpg copd",
+  "description": "An OWA to implement clinica practice guidelines for COPD",
+  "launch_path": "index.html",
+  "icons": {
+    "48": "/img/omrs-button.png"
+  },
+  "developer": {
+    "name": "mwhitaker22",
+    "url": "https://github.com/iupui-soic/owa-copd"
+  },
+  "default_locale": "en",
+    "activities": {
+      "openmrs": {
+        "href": "*"
+      }
+    }
+}
