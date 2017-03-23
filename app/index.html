@@ -1,24 +1,65 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>cpg copd</title>
-    <!-- openmrs favicon -->
-    <link rel="shortcut icon" type="image/ico" href="../../images/openmrs-favicon.ico"/>
-    <link rel="icon" type="image/png" href="../../images/openmrs-favicon.png"/>
-  </head>
-  <body>
-    <header>
-      <div class="logo">
-          <a href="../../">
-              <img src="img/openmrs-with-title-small.png"/>
-          </a>
-      </div>
-      <span class="app-title">cpg copd</span>
-    </header>
-    <div class="clear"></div>
-    <div id="body-wrapper">
-      <div class="instructions">Replace this with the content of your app.</div>
-    </div>
+    <head>
+        <title>Clinical practice Guidelines for COPD</title>
+        <!-- openmrs favicon -->
+        <link rel="shortcut icon" type="image/ico" href="../../images/openmrs-favicon.ico"/>
+        <link rel="icon" type="image/png" href="../../images/openmrs-favicon.png"/>
+    </head>
+    <link href="/openmrs/moduleResources/legacyui/css/openmrs.css?v=2.0.1" type="text/css" rel="stylesheet">
+    <link href="/openmrs/moduleResources/legacyui/css/style.css?v=2.0.1" type="text/css" rel="stylesheet">
+    <link href="/openmrs/scripts/jquery-ui/css/green/jquery-ui.custom.css" type="text/css" rel="stylesheet">
 
-  </body>
+    <body>
+        <div id="banner" xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" xmlns:openmrs="urn:jsptld:/WEB-INF/view/module/legacyui/taglibs/openmrs.tld">
+            <a href="/openmrs/index.htm">
+                <div id="logosmall"><img src="/openmrs/moduleResources/legacyui/images/openmrs_logo_text_small.png" alt="OpenMRS Logo" border="0"></div>
+            </a>  
+            <table id="bannerbar">
+                <tbody><tr>
+                        <td id="logocell"> <img src="/openmrs/images/openmrs_logo_white.gif" alt="" class="logo-reduced61">
+                        </td>
+                        <td id="barcell">
+                            <div class="barsmall" id="barsmall">
+                                <img align="left" src="/openmrs/moduleResources/legacyui/images/openmrs_green_bar.gif" alt="" class="bar-round-reduced50" id="bar-round-reduced50" style="height: 41px;">
+                                <ul class="navList" xmlns:spring="http://www.springframework.org/tags" xmlns:openmrs="urn:jsptld:/WEB-INF/view/module/legacyui/taglibs/openmrs.tld">
+                                    <li id="homeNavLink" class="firstChild">
+                                        <a href="/openmrs/">Home</a>
+                                    </li>
+                                    <li id="findPatientNavLink">
+                                        <a href="/openmrs/findPatient.htm">
+                                            Find/Create Patient
+                                        </a>
+                                    </li>
+                                    <li id="dictionaryNavLink">
+                                        <a href="/openmrs/dictionary/index.htm">Dictionary</a>
+                                    </li>
+                                    <li>
+                                        <a href="&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#9;&#10;&#9;&#9;/openmrs/cohortBuilder.list&#10;&#9;&#10;&#9;&#10;">Cohort Builder</a>
+                                    </li>
+                                    <li>
+                                        <a href="&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#9;&#10;&#9;&#10;&#9;&#9;/openmrs/module/reporting/dashboard/index.form&#10;&#9;&#10;">Reporting</a>
+                                    </li>
+                                    <li>
+                                        <a href="&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#10;&#9;&#10;&#9;&#10;&#9;&#9;/openmrs/module/appointmentscheduling/appointmentList.list&#10;&#9;&#10;">Appointments</a>
+                                    </li>
+                                    <li id="administrationNavLink">
+                                        <a href="/openmrs/admin/index.htm">Administration</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <script type="text/javascript">
+                                function resize() {
+                                    document.getElementById('bar-round-reduced50').style.height = document.getElementById('barsmall').offsetHeight + "px";
+                                }
+                                window.onload = resize;
+                                window.onresize = resize;
+                            </script>
+                        </td>
+                    </tr>
+                </tbody></table>
+        </div>
+        <div class="instructions"></div>
+    </div>
+</body>
 </html>

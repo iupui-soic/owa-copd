@@ -1,7 +1,7 @@
 {
   "version": "0.1.0",
   "name": "cpg copd",
-  "description": "An OWA to implement clinica practice guidelines for COPD",
+  "description": "An OWA to implement clinical practice guidelines for COPD",
   "launch_path": "index.html",
   "icons": {
     "48": "/img/omrs-button.png"
