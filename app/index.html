@@ -8,92 +8,105 @@
         <link href="/openmrs/moduleResources/legacyui/css/openmrs.css?v=2.0.1" type="text/css" rel="stylesheet">
         <link href="/openmrs/moduleResources/legacyui/css/openmrs_green.css" type="text/css" rel="stylesheet">
         <link href="/openmrs/moduleResources/legacyui/css/style.css?v=2.0.1" type="text/css" rel="stylesheet">
-        <link href="/openmrs/scripts/jquery-ui/css/green/jquery-ui.custom.css" type="text/css" rel="stylesheet">
     </head>
     <body>
-        <div id="banner">
-            <a href="/openmrs/index.htm">
-                <div id="logosmall">			
-                    <div id="logosmall"><img src="/openmrs/moduleResources/legacyui/images/openmrs_logo_text_small.png" alt="OpenMRS Logo" border="0" class="">
+        <div id="pageBody">
+            <div id="banner">
+                <a href="/openmrs/index.htm">
+                    <div id="logosmall">			
+                        <div id="logosmall"><img src="/openmrs/moduleResources/legacyui/images/openmrs_logo_text_small.png" alt="OpenMRS Logo" border="0" class="">
+                        </div>
                     </div>
-                </div>
-            </a>  
-            <table id="bannerbar">
-                <tbody><tr>
-                        <td id="logocell"> <img src="/openmrs/images/openmrs_logo_white.gif" alt="" class="logo-reduced61">
-                        </td>
-                        <td id="barcell">
-                            <div class="barsmall" id="barsmall">
-                                <img align="left" src="/openmrs/moduleResources/legacyui/images/openmrs_green_bar.gif" alt="" class="bar-round-reduced50" id="bar-round-reduced50" style="height: 41px;">
-                                <ul class="navList">
-                                    <li id="homeNavLink" class="firstChild">
-                                        <a href="/openmrs/">Home</a>
-                                    </li>
-                                    <li id="findPatientNavLink">
-                                        <a href="/openmrs/findPatient.htm">
-                                            Find/Create Patient
-                                        </a>
-                                    </li>
-                                    <li id="dictionaryNavLink">
-                                        <a href="/openmrs/dictionary/index.htm">Dictionary</a>
-                                    </li>
-                                    <li>
-                                        <a href="/openmrs/cohortBuilder.list&#10;&#9;&#10;&#9;&#10;">Cohort Builder</a>
-                                    </li>
-                                    <li>
-                                        <a href="/openmrs/module/reporting/dashboard/index.form&#10;&#9;&#10;">Reporting</a>
-                                    </li>
-                                    <li>
-                                        <a href="/openmrs/module/appointmentscheduling/appointmentList.list&#10;&#9;&#10;">Appointments</a>
-                                    </li>
-                                    <li id="administrationNavLink">
-                                        <a href="/openmrs/admin/index.htm">Administration</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <script type="text/javascript">
-                                function resize() {
-                                    document.getElementById('bar-round-reduced50').style.height = document.getElementById('barsmall').offsetHeight + "px";
-                                }
-                                window.onload = resize;
-                                window.onresize = resize;
-                            </script>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <div class="instructions">
-            <div>
-                <img src="http://www.healthline.com/hlcmsresource/images/topic_centers/copd/article-images/6_Signs_of_COPD_Slide_1.jpg" align="right" height="100" width="100">
+                </a>  
+                <table id="bannerbar">
+                    <tbody><tr>
+                            <td id="logocell"> <img src="/openmrs/images/openmrs_logo_white.gif" alt="" class="logo-reduced61">
+                            </td>
+                            <td id="barcell">
+                                <div class="barsmall" id="barsmall">
+                                    <img align="left" src="/openmrs/moduleResources/legacyui/images/openmrs_green_bar.gif" alt="" class="bar-round-reduced50" id="bar-round-reduced50" style="height: 41px;">
+                                    <ul class="navList">
+                                        <li id="homeNavLink" class="firstChild">
+                                            <a href="/openmrs/">Home</a>
+                                        </li>
+                                        <li id="findPatientNavLink">
+                                            <a href="/openmrs/findPatient.htm">
+                                                Find/Create Patient
+                                            </a>
+                                        </li>
+                                        <li id="dictionaryNavLink">
+                                            <a href="/openmrs/dictionary/index.htm">Dictionary</a>
+                                        </li>
+                                        <li>
+                                            <a href="/openmrs/cohortBuilder.list&#10;&#9;&#10;&#9;&#10;">Cohort Builder</a>
+                                        </li>
+                                        <li>
+                                            <a href="/openmrs/module/reporting/dashboard/index.form&#10;&#9;&#10;">Reporting</a>
+                                        </li>
+                                        <li>
+                                            <a href="/openmrs/module/appointmentscheduling/appointmentList.list&#10;&#9;&#10;">Appointments</a>
+                                        </li>
+                                        <li id="administrationNavLink">
+                                            <a href="/openmrs/admin/index.htm">Administration</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <script type="text/javascript">
+                                    function resize() {
+                                        document.getElementById('bar-round-reduced50').style.height = document.getElementById('barsmall').offsetHeight + "px";
+                                    }
+                                    window.onload = resize;
+                                    window.onresize = resize;
+                                </script>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-            <div>
-                <h4>Patient Search</h4>
-                <input type="button" value="Search"/>
-                <h1>Clinical Management of the COPD patient</h1> 
+            <div id="content">
                 <div>
-                    <h2> Clinical practice guideline recommendation #1 </h2>
-                    <p>The guideline panel recommends prescribing inhaled short-acting beta 2-agonists (SABAs) to patients with confirmed COPD for rescue therapy as needed</p> 
-
-                    <h2>Clinical practice guideline recommendation #2</h2>
-                    <p>The guideline panel recommends offering long-acting bronchodilators to patients with confirmed, stable COPD who continue to have respiratory symptoms</p>
-
-                    <h2>Clinical practice guideline recommendation #3</h2>
-                    <p>Clinicians should prescribe 1 of the following maintenance monotherapies for symptomatic patients with COPD and FEV1 less than 60% predicted:
-                        long-acting inhaled Î²-agonists, long-acting inhaled anticholinergics, or inhaled corticosteroids. (Grade: strong recommendation, high-quality evidence.)</p>
-                    <h2>Clinical practice guideline recommendation #4</h2>
-                    <p>Clinicians may consider combination inhaled therapies for symptomatic patients 
-                        with COPD and FEV1 less than 60% predicted. (Grade: weak recommendation, moderate-quality evidence.)</p>
-                    <h2>Clinical practice guideline recommendation #5</h2>
-                    <p>Clinicians should prescribe oxygen therapy in 
-                        patients with COPD and resting hypoxemia (Pao2 â‰¤55 mm Hg). (Grade: strong recommendation, moderate-quality evidence.)</p>
-                    <h2>Clinical practice guideline recommendation #6</h2>
-                    <p>Clinicians should consider prescribing pulmonary rehabilitation in symptomatic individuals
-                        with COPD who have an FEV1 less than 50% predicted. (Grade: weak recommendation, moderate-quality evidence.)</p>
+                    <img src="http://www.healthline.com/hlcmsresource/images/topic_centers/copd/article-images/6_Signs_of_COPD_Slide_1.jpg" align="right" height="100" width="100">
+                </div>
+                <div>
+                    <h4>Patient Search</h4>
+                    <input type="button" value="Search"/>
+                    <h1>Clinical Management of the COPD patient</h1> 
                     <div>
-                        <img style="-webkit-user-select: none;background-position: 0px 0px, 10px 10px;background-size: 20px 20px;background-color: white;background-image:linear-gradient(45deg, #eee 25%, transparent 25%, transparent 75%, #eee 75%, #eee 100%),linear-gradient(45deg, #eee 25%, transparent 25%, transparent 75%, #eee 75%, #eee 100%);" src="http://intranet.tdmu.edu.ua/data/kafedra/internal/vnutrmed2/classes_stud/en/med/lik/ptn/Internal%20medicine/4%20course/14.%20COPD-cladiagnostic%20criteria,treatment,%20prevention.files/image036.jpg">
+                        <h2> Clinical practice guideline recommendation #1 </h2>
+                        <p>The guideline panel recommends prescribing inhaled short-acting beta 2-agonists (SABAs) to patients with confirmed COPD for rescue therapy as needed</p> 
+
+                        <h2>Clinical practice guideline recommendation #2</h2>
+                        <p>The guideline panel recommends offering long-acting bronchodilators to patients with confirmed, stable COPD who continue to have respiratory symptoms</p>
+
+                        <h2>Clinical practice guideline recommendation #3</h2>
+                        <p>Clinicians should prescribe 1 of the following maintenance monotherapies for symptomatic patients with COPD and FEV1 less than 60% predicted:
+                            long-acting inhaled Î²-agonists, long-acting inhaled anticholinergics, or inhaled corticosteroids. (Grade: strong recommendation, high-quality evidence.)</p>
+                        <h2>Clinical practice guideline recommendation #4</h2>
+                        <p>Clinicians may consider combination inhaled therapies for symptomatic patients 
+                            with COPD and FEV1 less than 60% predicted. (Grade: weak recommendation, moderate-quality evidence.)</p>
+                        <h2>Clinical practice guideline recommendation #5</h2>
+                        <p>Clinicians should prescribe oxygen therapy in 
+                            patients with COPD and resting hypoxemia (Pao2 â‰¤55 mm Hg). (Grade: strong recommendation, moderate-quality evidence.)</p>
+                        <h2>Clinical practice guideline recommendation #6</h2>
+                        <p>Clinicians should consider prescribing pulmonary rehabilitation in symptomatic individuals
+                            with COPD who have an FEV1 less than 50% predicted. (Grade: weak recommendation, moderate-quality evidence.)</p>
+                        <div>
+                            <img style="-webkit-user-select: none;background-position: 0px 0px, 10px 10px;background-size: 20px 20px;background-color: white;background-image:linear-gradient(45deg, #eee 25%, transparent 25%, transparent 75%, #eee 75%, #eee 100%),linear-gradient(45deg, #eee 25%, transparent 25%, transparent 75%, #eee 75%, #eee 100%);" src="http://intranet.tdmu.edu.ua/data/kafedra/internal/vnutrmed2/classes_stud/en/med/lik/ptn/Internal%20medicine/4%20course/14.%20COPD-cladiagnostic%20criteria,treatment,%20prevention.files/image036.jpg">
+                        </div>
                     </div>
                 </div>
+            </div>
+        </div>
+        <div id="footer">
+            <div id="footerInner">
+                <span id="localeOptions">
+                    <a href="?lang=en_US">English (United States)</a> 
+                    | 
+                    English (United Kingdom)
+                </span>	
+                <span id="buildDate">Last Build: 2016-11-07 18:27</span>
+                <span id="codeVersion">Version: 2.0.1 Build f2ddde</span>
+                <span id="poweredBy"><a href="http://openmrs.org">Powered by OpenMRS <img border="0" align="top" src="/openmrs/moduleResources/legacyui/images/openmrs_logo_tiny.png"></a></span>
             </div>
         </div>
     </body>
