@@ -8,6 +8,8 @@
         <link href="/openmrs/moduleResources/legacyui/css/openmrs.css?v=2.0.1" type="text/css" rel="stylesheet">
         <link href="/openmrs/moduleResources/legacyui/css/openmrs_green.css" type="text/css" rel="stylesheet">
         <link href="/openmrs/moduleResources/legacyui/css/style.css?v=2.0.1" type="text/css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="js/cpgcopd.js" type="text/javascript"></script>
     </head>
     <body>
         <div id="pageBody">
@@ -69,8 +71,8 @@
                 </div>
                 <div>
                     <h4>Patient Search</h4>
-                    Patient Name <input type="text" id="searchpatient"/>
-                    <input type="button" value="Search"/>
+                    Patient Name: <input type="text" id="searchpatient"/>
+                    <input type="button" value="Search" onclick="findPatients()"/>
 
                     <h1>Clinical Management of the COPD patient</h1> 
                     <div>

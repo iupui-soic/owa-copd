@@ -1,20 +1,26 @@
-/**
- * The contents of this file are subject to the OpenMRS Public License
- * Version 1.0 (the "License"); you may not use this file except in
- * compliance with the License. You may obtain a copy of the License at
- * http://license.openmrs.org
- * Software distributed under the License is distributed on an "AS IS"
- * basis, WITHOUT WARRANTY OF ANY KIND, either express or implied. See the
- * License for the specific language governing rights and limitations
- * under the License.
- * Copyright (C) OpenMRS, LLC.  All Rights Reserved.
- */
-import jquery from 'jquery';
-
-(function () {
-  'use strict';
-  document.addEventListener("DOMContentLoaded", function(event) {
-    console.log('cpgcopd OpenMRS Open Web App Started.');
-    console.log('jQuery version: ' + jquery.fn.jquery);
-  });
-}());
+function findPatients() {
+    patientName = $("#searchpatient").val();
+    $.ajax({
+        url: "https://gw151.iu.xsede.org/openmrs/ws/rest/v1/person?q=" + patientName,
+        beforeSend: function (xhr) {
+            xhr.overrideMimeType("application/json; charset=x-user-defined");
+        }
+    }).done(function (data) {
+        searchArray = data.results;
+        for (i = 0; i < searchArray.length; i++) {
+            $.ajax({
+                url: "https://gw151.iu.xsede.org/openmrs/ws/rest/v1/obs?patient=" + searchArray[i].uuid,
+                beforeSend: function (xhr) {
+                    xhr.overrideMimeType("application/json; charset=x-user-defined");
+                }
+            }).done(function (obsData) {
+                for (j = 0; j < obsData.results.length; j++) {
+                    visitText = obsData.results[j].display;
+                    if(visitText.includes('CHRONIC OBSTRUCTIVE PULMONARY DISEASE')){
+                        console.log(searchArray[i].uuid);
+                    };
+                }
+            });
+        }
+    });
+}
