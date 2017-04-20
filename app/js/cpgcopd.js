@@ -34,7 +34,20 @@ function findPatients() {
                             xhr.overrideMimeType("application/json; charset=x-user-defined");
                         }
                     }).done(function (data) {
-                        $("#searchTableBody").html($("#searchTableBody").html() + '<tr onclick="loadObs(\''+data.uuid+'\')"><td>' + data.display + '</td><td>' + data.age + '</td><td>' + data.gender + '</td><td>' + data.uuid + '</td></tr>');
+                        $.ajax({
+                            url: "https://gw151.iu.xsede.org/openmrs/ws/rest/v1/obs?patient=" + data.uuid,
+                            beforeSend: function (xhr) {
+                                xhr.overrideMimeType("application/json; charset=x-user-defined");
+                            }
+                        }).done(function (data) {
+                            patientObs = data.results;
+                            for(i=0; i<patientObs.length; i++) {
+                                patientObsValue = parseInt(patientObs[i].display.substr(patientObs[i].display.indexOf(':') + 1, patientObs[i].display.length));
+                                if(patientObs[i].display.includes('FORCED EXPIRATORY VOLUME IN 1 SECOND') && patientObsValue < 70) {
+                                    $("#searchTableBody").html($("#searchTableBody").html() + '<tr onclick="loadObs(\'' + data.uuid + '\')"><td>'+patientObs[i].uuid+'</td><td></td><td></td><td></td><td></td></tr>');
+                                }
+                            }
+                        });
                     });
                 }
             });
