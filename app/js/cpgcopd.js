@@ -19,7 +19,7 @@ function findPatients() {
                 var persons = [];
                 for (j = 0; j < obsData.results.length; j++) {
                     visitText = obsData.results[j].display;
-                    if (visitText.includes('CHRONIC OBSTRUCTIVE PULMONARY DISEASE')) {
+                    if (visitText.includes('CHRONIC OBSTRUCTIVE PULMONARY DISEASE') && visitText.includes('Confirmed diagnosis')) {
                         url = this.url;
                         persons.push(url.substr(url.indexOf('=') + 1, url.length));
                     }
