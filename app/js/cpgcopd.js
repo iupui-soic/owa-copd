@@ -41,11 +41,20 @@ function findPatients() {
                             }
                         }).done(function (data) {
                             patientObs = data.results;
-                            for(i=0; i<patientObs.length; i++) {
+                            for (i = 0; i < patientObs.length; i++) {
                                 patientObsValue = parseInt(patientObs[i].display.substr(patientObs[i].display.indexOf(':') + 1, patientObs[i].display.length));
-                                if(patientObs[i].display.includes('FORCED EXPIRATORY VOLUME IN 1 SECOND') && patientObsValue < 70) {
-                                    $("#searchTableBody").html($("#searchTableBody").html() + '<tr onclick="loadObs(\'' + data.uuid + '\')"><td>'+patientObs[i].uuid+'</td><td></td><td></td><td></td><td></td></tr>');
-                                }
+                                if (patientObs[i].display.includes('FORCED EXPIRATORY VOLUME IN 1 SECOND') && patientObsValue < 70) {
+                                    $("#searchTableBody").html($("#searchTableBody").html() + '<tr onclick="loadObs(\'' + data.uuid + '\')"><td>' + patientObs[i].uuid + '</td><td></td><td></td><td></td><td></td></tr>');
+                                } else if (patientObs[i].display.includes('Fev1/fvc ratio') && patientObsValue < 70) {
+                                    $("#searchTableBody").html($("#searchTableBody").html() + '<tr onclick="loadObs(\'' + data.uuid + '\')"><td>' + patientObs[i].uuid + '</td><td></td><td></td><td></td><td></td></tr>');
+                                } else if (patientObs[i].display.includes('FORCED EXPIRATORY VOLUME IN 1 SECOND') && patientObsValue < 70) {
+                                    $("#searchTableBody").html($("#searchTableBody").html() + '<tr onclick="loadObs(\'' + data.uuid + '\')"><td></td><td>' + patientObs[i].uuid + '</td><td></td><td></td><td></td></tr>');
+                                } else if (patientObs[i].display.includes('Fev1/fvc ratio') && patientObsValue < 50) {
+                                    $("#searchTableBody").html($("#searchTableBody").html() + '<tr onclick="loadObs(\'' + data.uuid + '\')"><td></td><td>' + patientObs[i].uuid + '</td><td></td><td></td><td></td></tr>');
+                                } else if (patientObs[i].display.includes('FORCED EXPIRATORY VOLUME IN 1 SECOND') && patientObsValue < 70) {
+                                    $("#searchTableBody").html($("#searchTableBody").html() + '<tr onclick="loadObs(\'' + data.uuid + '\')"><td></td><td></td><td>' + patientObs[i].uuid + '</td><td></td><td></td></tr>');
+                                } else if (patientObs[i].display.includes('Fev1/fvc ratio') && patientObsValue < 30) {
+                                    $("#searchTableBody").html($("#searchTableBody").html() + '<tr onclick="loadObs(\'' + data.uuid + '\')"><td></td><td></td><td>' + patientObs[i].uuid + '</td><td></td><td></td></tr>'); 
                             }
                         });
                     });
@@ -62,8 +71,8 @@ $(document).ready(function () {
         paging: false,
         ordering: false
     });
-});
-
+}
+);
 function loadObs(uuid) {
     console.log(uuid);
 }
